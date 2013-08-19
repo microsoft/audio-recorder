@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{32950044-1799-4102-a4c7-8ff477b5b081}" Title="AudioRecorder" RuntimeType="Silverlight" Version="0.1.0.0" Genre="apps.normal" Author="AudioRecorder author" Description="AudioRecorder example application demonstrates how to capture and render audio in Windows Phone 8 devices. " Publisher="AudioRecorder" PublisherID="{c471bcd7-185e-4578-a7ab-c87b915b1bc0}">
+  <App xmlns="" ProductID="{32950044-1799-4102-a4c7-8ff477b5b081}" Title="AudioRecorder" RuntimeType="Silverlight" Version="0.2.0.0" Genre="apps.normal" Author="AudioRecorder author" Description="AudioRecorder example application demonstrates how to capture and render audio in Windows Phone 8 devices. " Publisher="AudioRecorder" PublisherID="{c471bcd7-185e-4578-a7ab-c87b915b1bc0}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
