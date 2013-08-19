@@ -381,7 +381,7 @@ HRESULT WasapiAudio::InitCapture()
     if (SUCCEEDED(hr))
     {
         WAVEFORMATEX temp;
-        MyFillPcmFormat(temp, 2, 44100, 16); // stereo, 48000 Hz, 16 bit
+        MyFillPcmFormat(temp, 2, 44100, 16); // stereo, 44100 Hz, 16 bit
 
         *m_waveFormatEx = temp;
         m_sourceFrameSizeInBytes = (m_waveFormatEx->wBitsPerSample / 8) * m_waveFormatEx->nChannels;
@@ -444,7 +444,7 @@ HRESULT WasapiAudio::InitRender()
     if (SUCCEEDED(hr))
     {
         WAVEFORMATEX temp;
-        MyFillPcmFormat(temp, 2, 44100, 16); // stereo, 48000 Hz, 16 bit
+        MyFillPcmFormat(temp, 2, 44100, 16); // stereo, 44100 Hz, 16 bit
         
         *m_waveFormatEx = temp;
         m_sourceFrameSizeInBytes = (m_waveFormatEx->wBitsPerSample / 8) * m_waveFormatEx->nChannels;

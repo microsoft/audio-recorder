@@ -147,5 +147,6 @@ An article on audio handling in Windows Phone 8 devices in available at
 8. Version history
 -------------------------------------------------------------------------------
 
+0.2.0.0 Added a missing dependency affecting others than ARM device builds.
 0.1.0.0 First beta release.
 
