@@ -28,11 +28,12 @@ namespace AudioRecorder
     {
         // Members
         private Boolean updateVisualization = false;
-        private enum VisualizationStyle {Value, Deteriorating, Time };
+        private enum VisualizationStyle { Value, Deteriorating, Time };
         private VisualizationStyle visualizationStyle = VisualizationStyle.Time;
 
         private int barCount = 11;
         private Image[] barImages;
+        private int barBottomMargin;
 
         /// <summary>
         /// Constructor.
@@ -41,10 +42,33 @@ namespace AudioRecorder
         {
             InitializeComponent();
 
+            if (App.Current.Host.Content.ScaleFactor == 150)
+            {
+                BgBrush.ImageSource = new BitmapImage(
+                    new Uri(@"Assets/Background-720p.png", UriKind.Relative)
+                );
+                barBottomMargin = 444;
+            }
+            else
+            {
+                BgBrush.ImageSource = new BitmapImage(
+                    new Uri(@"Assets/Background.png", UriKind.Relative)
+                );
+                barBottomMargin = 394;
+            }
+
             SystemTray.SetOpacity(this, 0.01);
 
             App.AudioModel.AudioBufferChanged += new AudioBufferChangedEventHandler(AudioBufferChanged);
 
+            InitializeVisualizationBars();
+        }
+
+        /// <summary>
+        /// Initialize visualization bars. Position changes with aspect ratio.
+        /// </summary>
+        protected void InitializeVisualizationBars()
+        {
             // Initialize visualization bars
             barImages = new Image[barCount];
             for (int i = 0; i < barCount; i++)
@@ -55,7 +79,7 @@ namespace AudioRecorder
                 bar.Stretch = Stretch.None;
                 bar.HorizontalAlignment = HorizontalAlignment.Left;
                 bar.VerticalAlignment = VerticalAlignment.Bottom;
-                bar.Margin = new Thickness(36 + ((35+36) * i) / 2, 0, 0, 394);
+                bar.Margin = new Thickness(36 + ((35 + 36) * i) / 2, 0, 0, barBottomMargin);
                 bar.Height = 0;
                 barImages[i] = bar;
                 ContentPanel.Children.Add(bar);

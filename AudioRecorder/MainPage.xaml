@@ -28,7 +28,7 @@
         </Grid.RowDefinitions>
 
         <Grid.Background>
-            <ImageBrush ImageSource="Assets/Background.png" Stretch="Fill"/>
+            <ImageBrush x:Name="BgBrush" Stretch="Fill"/>
         </Grid.Background>
 
         <Grid x:Name="ContentPanel" Grid.Row="0" Margin="12,0,12,0">
@@ -37,8 +37,8 @@
             <Image x:Name="RecButton" Source="Assets/RecButtonUp.png" Stretch="None" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,555,33,0" Tap="OnRecButtonTap"/>
             <Image x:Name="RecLight" Source="Assets/RecLightOff.png" Stretch="None" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,555,189,0"/>
             <StackPanel Width="150" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,480,0,0" Tap="OnQualityTap">
-                <TextBlock x:Name="MonoStereoText" Text="Mono"></TextBlock>
-                <TextBlock x:Name="SampleRateText" Text="16000 Hz"></TextBlock>
+                <TextBlock x:Name="MonoStereoText" Text="Mono" Foreground="White"/>
+                <TextBlock x:Name="SampleRateText" Text="16000 Hz" Foreground="White"/>
             </StackPanel>
             <Rectangle x:Name="VisualizationRect" Height="320" Width="440" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,115,0,0" Fill="Transparent" Tap="OnVisualizationTap"/>
         </Grid>

@@ -40,7 +40,7 @@
                 <phone:LongListSelector.ItemTemplate>
                     <DataTemplate>
                         <ContentControl HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
-                            <RadioButton HorizontalAlignment="Stretch" Margin="0,0,0,0" GroupName="A" Background="Black" >
+                            <RadioButton HorizontalAlignment="Stretch" Margin="0,0,0,0" GroupName="A">
                                 <StackPanel Width="411" Margin="12,-7,0,0">
                                     <TextBlock Text="{Binding FileName}" Margin="0,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
                                     <TextBlock Text="{Binding FileLength}" Margin="0,0,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />

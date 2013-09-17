@@ -135,6 +135,7 @@
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Background-720p.png" />
     <Content Include="Assets\Background.png" />
     <Content Include="Assets\Delete.png" />
     <Content Include="Assets\FilesButtonDown.png" />
