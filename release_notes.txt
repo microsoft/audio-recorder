@@ -141,12 +141,13 @@ http://projects.developer.nokia.com/wpaudiorecorder/browser/trunk/Licence.txt
 -------------------------------------------------------------------------------
 
 An article on audio handling in Windows Phone 8 devices in available at
-<TODO - INSERT LINK HERE>.
+http://developer.nokia.com/Community/Wiki/Audio_recording_and_playback_options_in_Windows_Phone.
 
 
 8. Version history
 -------------------------------------------------------------------------------
 
+0.3.0.0 Added 720p resolution support and yet another missing dependency fix.
 0.2.0.0 Added a missing dependency affecting others than ARM device builds.
 0.1.0.0 First beta release.
 
