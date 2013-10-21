@@ -1,9 +1,12 @@
-/*
- * Copyright © 2013 Nokia Corporation. All rights reserved.
- * Nokia and Nokia Connecting People are registered trademarks of Nokia Corporation. 
- * Other product and company names mentioned herein may be trademarks
- * or trade names of their respective owners. 
- * See LICENSE.TXT for license information.
+/**
+ * Copyright (c) 2013 Nokia Corporation. All rights reserved.
+ *
+ * Nokia, Nokia Connecting People, Nokia Developer, and HERE are trademarks
+ * and/or registered trademarks of Nokia Corporation. Other product and company
+ * names mentioned herein may be trademarks or trade names of their respective
+ * owners.
+ *
+ * See the license text file delivered with this project for more information.
  */
 
 using System.Reflection;
@@ -19,7 +22,7 @@ using System.Resources;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("AudioRecorder")]
-[assembly: AssemblyCopyright("Copyright © 2013 Nokia Corporation.")]
+[assembly: AssemblyCopyright("Copyright (c) 2013 Nokia Corporation. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
