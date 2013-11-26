@@ -150,7 +150,9 @@ int WasapiAudio::ReadBytes(Platform::Array<byte>^* byteArray)
     {
         hr = m_pCaptureClient->GetNextPacketSize(&packetSize);
 
-        while (SUCCEEDED(hr) && packetSize > 0)
+        while (SUCCEEDED(hr) 
+			&& packetSize > 0 
+			&& MY_MAX_RAW_BUFFER_SIZE > accumulatedBytes + packetSize * m_sourceFrameSizeInBytes)
         {
             BYTE* packetData = nullptr;
             UINT32 frameCount = 0;
@@ -301,7 +303,7 @@ bool WasapiAudio::Update()
     // See how much buffer space is available.
     if (SUCCEEDED(hr))
     {
-        hr = m_pDefaultRenderDevice->GetCurrentPadding( &numFramesPadding);
+        hr = m_pDefaultRenderDevice->GetCurrentPadding(&numFramesPadding);
         numFramesAvailable = bufferFrameCount - numFramesPadding;
     }
 
@@ -313,11 +315,17 @@ bool WasapiAudio::Update()
 
     if (SUCCEEDED(hr))
     {
-        if (audioIndex + (long)numFramesAvailable * m_sourceFrameSizeInBytes < audioByteCount)
+        UINT32 numFramesInData = (audioByteCount - audioIndex) / m_sourceFrameSizeInBytes;
+        if (numFramesInData > numFramesAvailable)
         {
-            memcpy(pData, audioBytes+audioIndex, numFramesAvailable * m_sourceFrameSizeInBytes);
-            audioIndex += numFramesAvailable * m_sourceFrameSizeInBytes;
-            hr = m_pRenderClient->ReleaseBuffer(numFramesAvailable, 0);
+            numFramesInData = numFramesAvailable;
+        }
+
+        if (numFramesInData > 0)
+        {
+            memcpy(pData, audioBytes+audioIndex, numFramesInData * m_sourceFrameSizeInBytes);
+            audioIndex += numFramesInData * m_sourceFrameSizeInBytes;
+            hr = m_pRenderClient->ReleaseBuffer(numFramesInData, 0);
         }
         else
         {
@@ -334,6 +342,12 @@ bool WasapiAudio::Update()
     {
         ret = true;
     }
+
+	if (ret == false)
+	{
+		// Nothing to play anymore
+		started = false;
+	}
 
     return ret;
 }
