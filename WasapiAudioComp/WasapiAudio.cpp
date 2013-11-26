@@ -140,7 +140,7 @@ int WasapiAudio::ReadBytes(Platform::Array<byte>^* byteArray)
 {
     int ret = 0;
     if (!started) return ret;
-
+	
     BYTE *tempBuffer = new BYTE[MY_MAX_RAW_BUFFER_SIZE];
     UINT32 packetSize = 0;
     HRESULT hr = S_OK;
@@ -150,19 +150,19 @@ int WasapiAudio::ReadBytes(Platform::Array<byte>^* byteArray)
     {
         hr = m_pCaptureClient->GetNextPacketSize(&packetSize);
 
-        while (SUCCEEDED(hr) && packetSize > 0)
-        {
-            BYTE* packetData = nullptr;
-            UINT32 frameCount = 0;
-            DWORD flags = 0;
-            if (SUCCEEDED(hr))
-            {
-                hr = m_pCaptureClient->GetBuffer(&packetData, &frameCount, &flags, nullptr, nullptr);
-                unsigned int incomingBufferSize = frameCount * m_sourceFrameSizeInBytes;
+		while (SUCCEEDED(hr) && packetSize > 0 && (packetSize * m_sourceFrameSizeInBytes + accumulatedBytes < MY_MAX_RAW_BUFFER_SIZE))
+		{
+			BYTE* packetData = nullptr;
+			UINT32 frameCount = 0;
+			DWORD flags = 0;
+			if (SUCCEEDED(hr))
+			{
+				hr = m_pCaptureClient->GetBuffer(&packetData, &frameCount, &flags, nullptr, nullptr);
+				unsigned int incomingBufferSize = frameCount * m_sourceFrameSizeInBytes;
 
-                memcpy(tempBuffer + accumulatedBytes, packetData, incomingBufferSize);
-                accumulatedBytes += incomingBufferSize;
-            }
+				memcpy(tempBuffer + accumulatedBytes, packetData, incomingBufferSize);
+				accumulatedBytes += incomingBufferSize;
+			}
 
             if (SUCCEEDED(hr))
             {
