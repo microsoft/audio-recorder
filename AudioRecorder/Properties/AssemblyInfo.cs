@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2013 Nokia Corporation. All rights reserved.
+ * Copyright (c) 2013-2014 Microsoft Mobile. All rights reserved.
  *
  * Nokia, Nokia Connecting People, Nokia Developer, and HERE are trademarks
  * and/or registered trademarks of Nokia Corporation. Other product and company
@@ -22,7 +22,7 @@ using System.Resources;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("AudioRecorder")]
-[assembly: AssemblyCopyright("Copyright (c) 2013 Nokia Corporation. All rights reserved.")]
+[assembly: AssemblyCopyright("Copyright (c) 2013-2014 Microsoft Mobile. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
