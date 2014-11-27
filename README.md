@@ -1,10 +1,12 @@
 AudioRecorder
 =============
 
-AudioRecorder example application demonstrates how to record and play audio on Windows Phone 8 devices. XNA Framework Audio API and Windows Audio Session API (WASAPI) are covered by the application. 
+AudioRecorder example application demonstrates how to record and play audio on
+Windows Phone 8 devices. XNA Framework Audio API and Windows Audio Session API
+(WASAPI) are covered by the application. 
 
 This example application is hosted in GitHub:
-https://github.com/nokia-developer/audio-recorder
+https://github.com/Microsoft/audio-recorder
 
 Developed with:
 
@@ -37,7 +39,8 @@ To build and run the sample:
  * Press F5 to build the project and run it on the Windows Phone Emulator.
 
 To deploy the sample on Windows Phone device:
- * See the official documentation for deploying and testing applications on Windows Phone devices at http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx
+ * See the official documentation for deploying and testing applications on
+   Windows Phone devices at http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx
 
 
 About the implementation
@@ -65,7 +68,8 @@ Important classes:
 | WasapiAudio | Handles the audio capturing and rendering using WASAPI. |
 
 
-For more information about audio handling in Windows Phone 8 devices, see an article available at http://developer.nokia.com/Community/Wiki/Audio_recording_and_playback_options_in_Windows_Phone.
+For more information about audio handling in Windows Phone 8 devices, see an
+article available at http://developer.nokia.com/Community/Wiki/Audio_recording_and_playback_options_in_Windows_Phone.
 
 
 Known issues
@@ -77,46 +81,9 @@ No known issues.
 License
 -------
 
-    Copyright © 2013 Nokia Corporation. All rights reserved.
-    
-    Nokia, Nokia Developer, and HERE are trademarks and/or registered trademarks of
-    Nokia Corporation. Other product and company names mentioned herein may be
-    trademarks or trade names of their respective owners.
-    
-    License
-    Subject to the conditions below, you may use, copy, modify and/or merge copies
-    of this software and associated content and documentation files (the “Software”)
-    to test, develop, publish, distribute, sub-license and/or sell new software
-    derived from or incorporating the Software, solely in connection with Nokia
-    devices. Some of the documentation, content and/or software maybe licensed under
-    open source software or other licenses. To the extent such documentation,
-    content and/or software are included, licenses and/or other terms and conditions
-    shall apply in addition and/or instead of this notice. The exact terms of the
-    licenses, disclaimers, acknowledgements and notices are reproduced in the
-    materials provided, or in other obvious locations. No other license to any other
-    intellectual property rights is granted herein.
-    
-    This file, unmodified, shall be included with all copies or substantial portions
-    of the Software that are distributed in source code form.
-    
-    The Software cannot constitute the primary value of any new software derived
-    from or incorporating the Software.
-    
-    Any person dealing with the Software shall not misrepresent the source of the
-    Software.
-    
-    Disclaimer
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-    FOR A PARTICULAR PURPOSE, QUALITY AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES (INCLUDING,
-    WITHOUT LIMITATION, DIRECT, SPECIAL, INDIRECT, PUNITIVE, CONSEQUENTIAL,
-    EXEMPLARY AND/ OR INCIDENTAL DAMAGES) OR OTHER LIABILITY, WHETHER IN AN ACTION
-    OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-    
-    Nokia Corporation retains the right to make changes to this document at any
-    time, without notice.
+See the license file delivered with this project.
+The license is also available online at
+https://github.com/Microsoft/audio-recorder/blob/master/License.txt
 
 
 Version history

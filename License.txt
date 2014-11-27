@@ -1,4 +1,4 @@
-Copyright © 2013-2014 Microsoft Mobile Oy. All rights reserved.
+Copyright © 2013-2014 Microsoft Mobile. All rights reserved.
 
 Microsoft is a registered trademark of Microsoft Corporation. Nokia and HERE are
 trademarks and/or registered trademarks of Nokia Corporation. Other product and
