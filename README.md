@@ -5,6 +5,9 @@ AudioRecorder example application demonstrates how to record and play audio on
 Windows Phone 8 devices. XNA Framework Audio API and Windows Audio Session API
 (WASAPI) are covered by the application. 
 
+![Main page](/doc/audio_recorder_main_page_small.png?raw=true)&nbsp;
+![Audio files page](/doc/audio_recorder_files_page_small.png?raw=true)
+
 This example application is hosted in GitHub:
 https://github.com/Microsoft/audio-recorder
 
